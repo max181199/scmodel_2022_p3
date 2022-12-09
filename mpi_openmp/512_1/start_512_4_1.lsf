@@ -1,0 +1,7 @@
+source /polusfs/setenv/setup.SMPI
+#BSUB -n 4
+#BSUB -W 00:15
+#BSUB -o m_512_4_1.out
+#BSUB -e m_512_4_1.err
+#BSUB -R "affinity[core(4)]"
+mpiexec ./m_512_1

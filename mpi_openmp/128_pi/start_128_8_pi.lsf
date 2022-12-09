@@ -1,0 +1,7 @@
+source /polusfs/setenv/setup.SMPI
+#BSUB -n 8
+#BSUB -W 00:15
+#BSUB -o m_128_8_pi.out
+#BSUB -e m_128_8_pi.err
+#BSUB -R "affinity[core(4)]"
+mpiexec ./m_128_pi
